@@ -1,0 +1,59 @@
+.price_controller{
+
+    width: 300px;
+    padding: 20px;
+
+    h3{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    span{
+        font-size: 23px;
+        font-weight: bold;
+        color: #dd2222;
+    }
+
+    .slider{
+        height: 5px;
+        border-radius: 5px;
+        background-color: #ddd;
+        position: relative;
+        
+        .progress{
+            height: 5px;
+            background-color: #dd2222;
+            border-radius: 5px;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+        }
+    }
+
+    .range-input{
+        position: relative;
+
+        input{
+          &[type = "range"]{
+            position: absolute;
+            top: -5px;
+            width: 100%;
+            height: 5px;
+            background: none;
+            -webkit-appearance: none;
+            pointer-events: none;
+            left: 0;
+            right: 0;
+          }
+             
+            &::-webkit-slider-thumb{
+                height: 17px;
+                width: 17px;
+                border-radius: 50%;
+                -webkit-appearance: none;
+                pointer-events: auto;
+                background-color: #dd2222;
+            }
+        }
+    }
+}

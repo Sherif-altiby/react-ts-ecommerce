@@ -1,0 +1,77 @@
+@import "../../App.scss";
+
+footer{
+    background-color: var(--footer_color);
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    ul {
+        
+        width: calc(100% / 3 - 20px);
+
+        @include tablet{
+            width: calc(100% / 2 - 20px);
+        }
+
+        @include tablet-mini{
+            width: 100%;
+        }
+ 
+        li{
+            font-size: 14px;
+            color: var(--text_color);
+
+            .input_email{
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                input{
+                    border: 1px solid #ededed;
+                    outline: none;
+                    height: 40px;
+                    padding-left: 10px;
+                }
+                .btn{
+                    background-color: var(--main_color);
+                    height: 40px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--white_color);
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    cursor: pointer;
+                    width: 100px;
+                 }
+            }
+
+            &.icons{
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+
+                .icon{
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: var(--white_color);
+                    cursor: pointer;
+                    transition: var(--main_transition);
+
+                    &:hover{
+                        background-color: var(--main_color);
+                        color: var(--white_color);
+                    }
+                }
+            }
+        }
+    }
+}

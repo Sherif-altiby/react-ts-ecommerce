@@ -1,0 +1,88 @@
+@import "../../App.scss";
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  @include tablet-mini{
+    .logo{
+      width: 70px;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    @include tablet {
+      display: none;
+    }
+
+    li {
+      color: var(--dark_color);
+
+      a {
+        color: inherit;
+        font-weight: bold;
+
+        &.active {
+          color: var(--main_color);
+        }
+      }
+    }
+  }
+
+  .cart_love {
+    display: flex;
+    gap: 20px;
+
+    @include tablet {
+      display: none;
+    }
+
+    .heart,
+    .cart {
+      font-size: 20px;
+      position: relative;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: 19px;
+        background-color: var(--main_color);
+        color: var(--white_color);
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .icon_bar {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    border: 1px solid var(--p_color);
+    cursor: pointer;
+    padding: 0px 10px;
+    border-radius: 3px;
+  }
+}

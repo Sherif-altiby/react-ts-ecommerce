@@ -1,0 +1,141 @@
+@import "../../App.scss";
+
+.contact{
+
+    .banner {
+        background-image: url(/src/assets/breadcrumb.jpg);
+        background-size: cover;
+        background-position: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white_color);
+        flex-direction: column;
+    
+        h1 {
+          font-size: 50px;
+        }
+    
+        .text {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+    
+          a {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .icons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 100px 0px;
+        flex-wrap: wrap;
+
+        @include tablet-mini{
+            gap: 50px;
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+        .icon{
+            text-align: center;
+
+             @include tablet-mini{
+                width: calc(100% / 2 - 30px);
+             }
+
+             @include mobile{
+                width: 100%;
+             }
+
+            i{
+                color: var(--main_color);
+                font-size: 35px;
+            }
+
+            p{
+                color: var(--secondary_color);
+
+                @include tablet-mini{
+                    font-size: 13px;
+                }
+            }
+        }
+      }
+
+      .contact_us{
+
+        h1{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+
+            input, textarea{
+                border: 1px solid var(--secondary_color);
+                height: 30px;
+                border-radius: 5px;
+                font-size: 15px;
+                padding: 25px 20px;
+                outline: none;
+                color: var(--secondary_color);
+
+                &[type = "submit"]{
+                    width: fit-content;
+                    margin: auto;
+                    width: 200px;
+                    padding-top: 20px;
+                    padding-bottom: 40px;
+                    background-color: var(--main_color);
+                    color: var(--white_color);
+                    cursor: pointer;
+                    font-size: 20px;
+                    border: none;
+                }
+            }
+
+            textarea{
+                height: 100px;
+                margin: 50px 0px;
+                padding-top: 10px;
+
+                @include tablet-mini{
+                    margin: 20px 0px;
+                }
+            }
+
+            .inputs_name_email{
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                gap: 50px;
+
+                @include tablet-mini{
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                input{
+                    width: 50%;
+                     
+                    @include tablet-mini{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+      }
+}
